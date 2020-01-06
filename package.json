@@ -24,6 +24,8 @@
     "@angular/router": "^8.2.9",
     "angular-in-memory-web-api": "~0.9.0",
     "core-js": "^2.6.9",
+    "devexpress-diagram": "^0.2.10",
+    "devexpress-gantt": "^0.1.2",
     "devextreme": "~19.2.5",
     "devextreme-angular": "^19.2.5",
     "hammerjs": "^2.0.8",
