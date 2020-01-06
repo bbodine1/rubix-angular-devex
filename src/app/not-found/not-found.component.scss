@@ -1,0 +1,17 @@
+@import "../../styles/config";
+
+:host {
+  max-width: 500px;
+  padding: 16px;
+}
+
+// Header
+mat-card-header {
+  margin-bottom: 32px;
+}
+
+// Main image
+img {
+  height: 120px;
+  margin: 0 10% 32px;
+}

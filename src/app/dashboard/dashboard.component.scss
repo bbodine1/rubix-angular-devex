@@ -1,0 +1,96 @@
+@import "../../styles/config";
+@import '~@angular/material/theming';
+
+:host {
+  display: block;
+  height: calc(100vh - #{$top-toolbar-height});
+}
+
+// Main inner content
+main {
+  max-width: $max-page-width;
+  margin: 0 auto;
+  padding-top: 16px;
+}
+
+// Title
+h1 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+// Modules container
+.module-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+  padding: 16px;
+  height: calc(100vh - 154px);
+  overflow-y: auto
+}
+
+// Module card
+mat-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 140px;
+  cursor: pointer;
+  @include mat-elevation-transition;
+  &:hover {
+    @include mat-elevation(8);
+  }  
+}
+
+// Icon area
+.icon-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  margin-bottom: 8px;
+}
+
+// Mat icon size
+.icon-area  mat-icon {
+  $fz: 36px;
+  font-size: $fz;
+  width: $fz;
+  height: $fz;
+}
+
+// Module title
+mat-card-title {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+// Module info
+mat-card-subtitle {
+  text-align: center;
+  font-weight: 300;
+}
+
+// Module actions
+mat-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  font-size: 12px;
+  height: 24px;
+  color: $rubixorange;
+}
+
+// Module actions icon
+mat-card-actions mat-icon {
+  $fz: 16px;
+  font-size: $fz;
+  width: $fz;
+  height: $fz;
+  margin-left: 4px;
+  margin-top: 1px;
+}

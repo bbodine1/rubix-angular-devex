@@ -1,0 +1,100 @@
+@import "../../../styles/config";
+
+// Main wrapper
+mat-sidenav-container {
+  min-height: 70vh;
+}
+
+// Main Content
+mat-sidenav-content {
+  padding: 0;
+  min-height: 100vh;
+}
+
+
+// SIDENAV STYLES ////////////////////////////////////
+// Sidenav
+[class^="side-"] {
+  width: $sidenav-width;
+
+  p {
+    background-color: map-get($mat-rubixorange, 900);
+    margin: 0;
+    text-align: center;
+    padding: 8px 0;
+    margin-bottom: 48px;
+  }
+}
+
+// Right Sidenav
+.side-right {
+
+  mat-form-field {
+    margin-bottom: 8px;
+    padding: 0 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+
+
+
+
+// TOPNAV STYLES ////////////////////////////////////
+// Topnav Toolbar
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  height: $top-toolbar-height;
+  padding: 0;
+  color: $white;
+}
+
+// Topnav Content (left and right)
+.topnav [class^="content-"] {
+  display: flex;
+  align-items: center;
+}
+
+// Topnav Content Left
+.topnav .content-left {
+  background: linear-gradient(90deg, map-get($mat-rubixorange, 500) 0%, map-get($mat-rubixorange, 600) 100%);
+  box-shadow: 0 0 3px 0 rgba($black, 0.2);  
+
+  > img {
+    width: 120px;
+    margin-left: 8px;
+    margin-right: 16px;
+    cursor: pointer;
+  }
+}
+
+// Topnav Content :right
+.topnav .content-right {
+  padding-right: 16px;
+
+  > button {
+    padding: 0;
+    min-width: 32px;
+  }
+}
+
+// Topnav Menu button main
+.topnav .menu-button-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $top-toolbar-height;
+  width: $top-toolbar-height;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+
+  &:hover {
+    background-color: map-get($mat-rubixorange, 300);
+  }
+
+  img {
+    width: 16px;
+  }
+}

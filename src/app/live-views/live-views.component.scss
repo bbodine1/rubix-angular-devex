@@ -1,0 +1,21 @@
+@import "../../styles/config";
+
+:host {
+  display: block;
+  height: calc(100vh - #{$top-toolbar-height});
+}
+
+// Main inner content
+main {
+  width: $max-page-width;
+  margin: 0 auto;
+  padding-top: 16px;
+}
+
+// Tab Content
+.content {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,24 @@
+<main>
+  <h1>Parts Management</h1>
+
+  <div class="module-wrapper">
+    <mat-card *ngFor="let module of modules" routerLink="{{ module.link }}">
+      <div *ngIf="module.icon" class="icon-area">
+        <mat-icon [attr.aria-label]="module.name">{{ module.icon }}</mat-icon>
+      </div>
+
+      <mat-card-title>
+        {{ module.name }}
+      </mat-card-title>
+
+      <mat-card-subtitle>
+        {{ module.info }}
+      </mat-card-subtitle>
+
+      <mat-card-actions>
+        <a>Try it now</a>
+        <mat-icon>arrow_forward</mat-icon>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</main>

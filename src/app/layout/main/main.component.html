@@ -1,0 +1,54 @@
+<mat-sidenav-container [hasBackdrop]="hasBackdrop.value">
+	<mat-sidenav #sideLeft [mode]="mode.value">
+    <div class="side-left">
+      <p>Side Left</p> 
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav #sideRight [mode]="mode.value" position="end">
+    <div class="side-right">
+      <p>Side Right</p>
+
+      <mat-form-field>
+        <mat-label>Sidenav mode</mat-label>
+        <mat-select #mode [(ngModel)]="defaultSidenavMode">
+          <mat-option value="side">Side</mat-option>
+          <mat-option value="over" selected>Over</mat-option>
+          <mat-option value="push">Push</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Has backdrop</mat-label>
+        <mat-select #hasBackdrop [(ngModel)]="defaultBackdropMode">
+          <mat-option value="true" selected>True</mat-option>
+          <mat-option value="false">False</mat-option>
+        </mat-select>
+      </mat-form-field>    
+    </div>
+  </mat-sidenav>
+
+	<mat-sidenav-content>
+    <mat-toolbar color="primary" class="topnav">
+      <div class="content-left">
+        <div class="menu-button-main" (click)="sideLeft.toggle()" value="sidebarclosed" aria-hidden="false" aria-label="Menu Button">
+          <img src="assets/img/menu-icon.svg" alt="Menu">
+        </div>
+
+        <img routerLink="/dashboard" src="/assets/img/rubix-logo.svg" alt="Rubix Logo">
+      </div>
+
+      <div class="content-right">
+        <button mat-button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="sideRight.toggle()">Open Flyout Menu</button>
+          <button mat-menu-item routerLink="/login">Sign Out</button>
+        </mat-menu>
+      </div>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+	</mat-sidenav-content>
+</mat-sidenav-container>

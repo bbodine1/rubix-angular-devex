@@ -1,0 +1,13 @@
+@import '~@angular/material/theming';
+@import './styles/config-colors';
+@include mat-core();
+
+// ======== Rubix custom theme ======== //
+
+$rubix-primary: mat-palette($mat-rubixorange);
+$rubix-accent: mat-palette($mat-rubixorange, 100, 500, A100);
+$rubix-warn: mat-palette($mat-rubixorange, 900);
+
+$rubix-theme: mat-dark-theme($rubix-primary, $rubix-accent, $rubix-warn);
+
+@include angular-material-theme($rubix-theme); 

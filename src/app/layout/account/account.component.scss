@@ -1,0 +1,15 @@
+@import "../../../styles/config";
+
+// Main wrapper
+mat-sidenav-container {
+  min-height: 100vh;
+}
+
+// Main Content
+mat-sidenav-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0;
+}

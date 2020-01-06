@@ -1,0 +1,13 @@
+@import "../../styles/config";
+
+:host {
+  display: block;
+  height: calc(100vh - #{$top-toolbar-height});
+}
+
+// Main inner content
+main {
+  width: $max-page-width;
+  margin: 0 auto;
+  padding-top: 16px;
+}

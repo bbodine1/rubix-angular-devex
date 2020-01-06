@@ -1,0 +1,10 @@
+@import "./functions/all";
+@import "./mixins/all";
+
+@import "config-colors";
+
+// Global Variables
+$top-toolbar-height: 50px;
+$sidenav-width: 300px;
+$max-page-width: 1200px;
+$global-transition: all 150ms ease-in-out;
